@@ -4,6 +4,27 @@
   "autoupdate": true,
   "username": "thomasmol",
   "autoshare": false,
+  "permission": {
+    "bash": {
+      "rm *": "ask",
+      "mv */.*": "ask",
+      "prisma *": "ask",
+      "drizzle* *": "ask",
+      "npx prisma *": "ask",
+      "bunx prisma *": "ask",
+      "npm run prisma*": "ask",
+      "npm run drizzle*": "ask",
+      "docker *": "ask",
+      "kubectl *": "ask",
+      "git push*": "ask",
+      "gh pr merge*": "ask",
+      "gh pr ready*": "ask",
+      "gh pr close*": "ask",
+      "gh issue close*": "ask",
+      "gh issue delete*": "ask",
+      "gh repo delete*": "ask"
+    }
+  },
   "mcp": {
     "directus": {
       "type": "local",
