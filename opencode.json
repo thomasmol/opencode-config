@@ -22,7 +22,10 @@
       "gh pr close*": "ask",
       "gh issue close*": "ask",
       "gh issue delete*": "ask",
-      "gh repo delete*": "ask"
+      "gh repo delete*": "ask",
+      "aws *": "ask",
+      "gcloud *": "ask",
+      "az *": "ask",
     }
   },
   "mcp": {
