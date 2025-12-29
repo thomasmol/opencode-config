@@ -12,4 +12,4 @@ description: Create draft pull requests on GitHub
 
 ## When to use me
 - Use me when you want to create a draft pull request on GitHub for your code changes.
-- If my current branch is the main or master branch, create a new branch with relevant name before creating the draft PR.
+- If my current branch is the main or master branch, create a new branch with relevant name and prefix before creating the draft PR.
