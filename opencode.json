@@ -26,6 +26,14 @@
       "aws *": "ask",
       "gcloud *": "ask",
       "az *": "ask",
+      "sudo *": "ask"
+    }
+  },
+  "agent": {
+    "plan": {
+      "tools": {
+        "bash": true
+      }
     }
   },
   "mcp": {
