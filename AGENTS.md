@@ -28,5 +28,6 @@ Always follow the user's instructions precisely and avoid making assumptions abo
 - AVOID using `any` type
 - AVOID `let` statements
 - AVOID adding comments in code
-- PREFER single word variable names where possible
+- Always use single word variable names where possible
+- Always extract values to constants with SCREAMING_CASE where possible
 - Be extremely concise. Sacrifice grammar for the sake of concision.
