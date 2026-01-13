@@ -80,11 +80,10 @@
   },
   "mcp": {
     "directus": {
-      "type": "local",
-      "command": ["bun", "x", "@directus/content-mcp@latest"],
+      "type": "remote",
+      "url": "https://directus.audiogest.app/mcp",
       "enabled": false,
       "environment": {
-        "DIRECTUS_URL": "https://directus.audiogest.app",
         "DIRECTUS_TOKEN": "${env:DIRECTUS_TOKEN}"
       }
     },
