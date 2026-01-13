@@ -84,7 +84,7 @@
       "url": "https://directus.audiogest.app/mcp",
       "enabled": false,
       "headers": {
-        "Authorization": "Bearer ${env:DIRECTUS_TOKEN}"
+        "Authorization": "Bearer {env:DIRECTUS_TOKEN}"
       }
     },
     "linear": {
