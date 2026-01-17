@@ -51,6 +51,42 @@ query Issues($teamId: String!) {
 {"teamId": "9cfb482a-81e3-4154-b5b9-2c805e70a02d"}
 ```
 
+## Search issues
+
+```graphql
+query SearchIssues($filter: IssueFilter) {
+  issues(filter: $filter) {
+    nodes {
+      id
+      identifier
+      title
+      description
+      priority
+      assignee { name }
+      state { name }
+    }
+  }
+}
+```
+
+**Input (search by title):**
+```json
+{
+  "filter": {
+    "title": { "containsIgnoreCase": "bug" }
+  }
+}
+```
+
+**Input (search by description):**
+```json
+{
+  "filter": {
+    "description": { "containsIgnoreCase": "login" }
+  }
+}
+```
+
 ## Read issue
 
 ```graphql
