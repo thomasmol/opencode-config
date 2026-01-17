@@ -95,7 +95,7 @@
     "svelte": {
       "type": "local",
       "command": ["bun", "x", "-y", "@sveltejs/mcp@latest"],
-      "enabled": true
+      "enabled": false
     },
     "playwright": {
       "type": "local",
