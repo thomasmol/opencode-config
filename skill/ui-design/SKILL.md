@@ -1,6 +1,6 @@
 ---
 name: ui-design
-description: Opinionated constraints for building better interfaces with agents.
+description: Opinionated constraints for building better interfaces with agents. Use when user mentions UI, design, UX, or interface.
 ---
 
 # UI design

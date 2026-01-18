@@ -1,6 +1,6 @@
 ---
 name: pr-creation
-description: Create (draft) pull requests on GitHub
+description: Create (draft) pull requests on GitHub. Use when user requests to create a pr, pull request, draft pr, draft pull request.
 ---
 
 ## What I do

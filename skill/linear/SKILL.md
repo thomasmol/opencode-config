@@ -1,6 +1,6 @@
 ---
 name: linear
-description: Create, read, update, and list Linear issues using GraphQL API. Use when user mentions Linear issues, tickets, or tasks.
+description: Create, read, update, and list Linear issues using GraphQL API. Use when user requests to create, read, update, or list Linear issues, tickets, or tasks.
 ---
 
 ## What I do
