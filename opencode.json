@@ -97,11 +97,6 @@
       "command": ["bun", "x", "-y", "@sveltejs/mcp@latest"],
       "enabled": false
     },
-    "playwright": {
-      "type": "local",
-      "command": ["bun", "x", "@playwright/mcp@latest"],
-      "enabled": false
-    }
   },
   "tui": {
     "scroll_speed": 2,
