@@ -1,3 +1,7 @@
+Thank you for helping me with my work and life. Here are some general instructions to improve our collaboration:
+
+Before you begin run the bash command `date "+%Y-%m-%d %H:%M:%S"` to get the current date and time.
+
 Be extremely concise. Sacrifice grammar for the sake of concision.
 
 ## When we are planning or creating a spec
