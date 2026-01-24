@@ -20,12 +20,19 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - DO NOT do unnecessary destructuring of variables
 - DO NOT use `else` statements unless necessary
 - DO NOT use `try`/`catch` if it can be avoided
-- DO NOT return { success: true } in methods or functions
+- AVOID returning status variables like { success: true } in methods or functions
+- Always return the created or updated object directly
+- Always return void for delete methods and functions
 - AVOID `try`/`catch` where possible
 - AVOID `else` statements
-- AVOID using `any` type
+- AVOID using `any` type or `unknown` type casting
 - AVOID `let` statements
-- AVOID adding comments in code
+- AVOID adding new comments in code
 - Always use single word variable names where possible
-- Always extract values to constants with SCREAMING_CASE where possible
+- Always extract constants with SCREAMING_CASE
 - Be extremely concise. Sacrifice grammar for the sake of concision.
+
+## Philosophy
+
+This codebase and project will likely outlive you. Every shortcut becomes someone else's burden. Every hack compounds into technical debt that slows the whole team down.
+You are shaping the future of this project. The patterns you establish will be copied. The corners you cut will be cut again.
