@@ -4,6 +4,7 @@
   "autoupdate": true,
   "username": "thomasmol",
   "autoshare": false,
+  "plugin": ["@sveltejs/opencode"],
   "permission": {
     "bash": {
       "systemctl *": "ask",
@@ -77,26 +78,6 @@
         "bash": true
       }
     }
-  },
-  "mcp": {
-    "directus": {
-      "type": "remote",
-      "url": "https://directus.audiogest.app/mcp",
-      "enabled": false,
-      "headers": {
-        "Authorization": "Bearer {env:DIRECTUS_TOKEN}"
-      }
-    },
-    "linear": {
-      "type": "local",
-      "command": ["bun", "x", "-y", "mcp-remote", "https://mcp.linear.app/sse"],
-      "enabled": false
-    },
-    "svelte": {
-      "type": "local",
-      "command": ["bun", "x", "-y", "@sveltejs/mcp@latest"],
-      "enabled": false
-    },
   },
   "tui": {
     "scroll_speed": 2,
