@@ -24,6 +24,7 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - Always return the created or updated object directly
 - Always return void for delete methods and functions
 - AVOID toast/sonner as feedback mechanisms in ui/ux
+- AVOID wrapper functions that do little more than call another function
 - AVOID `try`/`catch` where possible
 - AVOID `else` statements
 - AVOID using `any` type or `unknown` type casting
