@@ -23,6 +23,7 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - AVOID returning status variables like { success: true } in methods or functions
 - Always return the created or updated object directly
 - Always return void for delete methods and functions
+- AVOID toast/sonner as feedback mechanisms in ui/ux
 - AVOID `try`/`catch` where possible
 - AVOID `else` statements
 - AVOID using `any` type or `unknown` type casting
