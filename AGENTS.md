@@ -29,7 +29,7 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - AVOID `let` statements
 - AVOID adding new comments in code
 - Always use single word variable names where possible
-- Always extract constants with SCREAMING_CASE
+- Extract reusable constants with SCREAMING_CASE
 - Be extremely concise. Sacrifice grammar for the sake of concision.
 
 ## Philosophy
