@@ -16,7 +16,8 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 
 - Always follow the user's instructions precisely and avoid making assumptions about their requirements.
 - Try to keep things in one function unless composable or reusable
-- NEVER use title casing for headings, file names, copy, or other text elements. Use sentence case instead.
+- Avoid using title casing in sentences (e.g., "Create User" should be "Create user")
+- Use sentence case instead and proper casing for names (e.g., "Create Stripe User" should be "Create Stripe user")
 - DO NOT do unnecessary destructuring of variables
 - DO NOT use `else` statements unless necessary
 - DO NOT use `try`/`catch` if it can be avoided
