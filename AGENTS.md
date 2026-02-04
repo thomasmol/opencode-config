@@ -2,22 +2,24 @@ Thank you for helping me with my work and life. Here are some general instructio
 
 Before you begin run the bash command `date "+%Y-%m-%d %H:%M:%S"` to get the current date and time.
 
-Be extremely concise. Sacrifice grammar for the sake of concision.
-
 ## When we are planning or creating a spec
 
-Examine existing code for guidance regarding implementation preferences and practices. After making the plan and todos, always uncover unanswered questions or ambiguities in the plan by asking the user for clarification. This ensures that the plan is clear and actionable before proceeding to execution mode. Be as concise as possible when asking for clarification.
-
+Examine existing code for guidance regarding implementation preferences and practices. After making the plan and todos, always uncover unanswered questions or ambiguities in the plan by asking the user for clarification. This ensures that the plan is clear and actionable before proceeding to execution mode. Be as concise as possible when asking for clarification. 
 ## When we are building
 
-If you encounter any uncertainties or ambiguities in the plan or tasks, promptly ask the user for clarification. This helps to ensure that the implementation aligns with the user's expectations and requirements. Keep your questions focused and to the point to facilitate quick responses. Never do more than what is explicitly specified in the plan without asking for clarification first.
+If you encounter any uncertainties or ambiguities in the plan or tasks, promptly ask the user for clarification. This helps to ensure that the implementation aligns with the user's expectations and requirements. Keep your questions focused and to the point to facilitate quick responses. Always follow the user's instructions and plan or spec precisely and avoid making assumptions about their requirements. Instead, ask the user for clarification on any uncertainties or ambiguities.
 
-## Style Guide
+## Chat style guide
 
-- Always follow the user's instructions precisely and avoid making assumptions about their requirements.
+- AVOID using title casing in sentences (NOT: "This Is A Sentence", BUT: "This is a sentence")
+- ALWAYS use proper punctuation when you say something.
+- Be concise and clear in your communication.
+
+## Code style guide
+
+- When writing copy use sentence case instead and casing for names (e.g., "Click here to create a Stripe user.")
+- AVOID using title casing in sentences (NOT: "This Is A Sentence", BUT: "This is a sentence")
 - Try to keep things in one function unless composable or reusable
-- Avoid using title casing in sentences (e.g., "Create User" should be "Create user")
-- Use sentence case instead and proper casing for names (e.g., "Create Stripe User" should be "Create Stripe user")
 - DO NOT do unnecessary destructuring of variables
 - DO NOT use `else` statements unless necessary
 - DO NOT use `try`/`catch` if it can be avoided
@@ -37,5 +39,4 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 
 ## Philosophy
 
-This codebase and project will likely outlive you. Every shortcut becomes someone else's burden. Every hack compounds into technical debt that slows the whole team down.
-You are shaping the future of this project. The patterns you establish will be copied. The corners you cut will be cut again.
+This codebase and project will likely outlive you. Every shortcut becomes someone else's burden. Every hack compounds into technical debt that slows the whole team down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
