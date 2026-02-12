@@ -4,6 +4,7 @@
   "autoupdate": true,
   "username": "thomasmol",
   "autoshare": false,
+  "plugin": ["@sveltejs/opencode"],
   "permission": {
     "bash": {
       "systemctl *": "ask",
