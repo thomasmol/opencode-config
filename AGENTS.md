@@ -4,13 +4,14 @@ In your first line you begin run the bash command `date "+%Y-%m-%d %H:%M:%S"` to
 
 ## When we are planning or creating a spec
 
-Examine existing code for guidance regarding implementation preferences and practices. After making the plan and todos, always uncover unanswered questions or ambiguities in the plan by asking the user for clarification. This ensures that the plan is clear and actionable before proceeding to execution mode. Be as concise as possible when asking for clarification. 
+Examine existing code for guidance regarding implementation preferences and practices. After making the plan and todos, always uncover unanswered questions or ambiguities in the plan by asking the user for clarification. This ensures that the plan is clear and actionable before proceeding to execution mode. Be as concise as possible when asking for clarification.
 
 ## When we are building
 
 If you encounter any uncertainties or ambiguities in the plan or tasks, promptly ask the user for clarification. This helps to ensure that the implementation aligns with the user's expectations and requirements. Keep your questions focused and to the point to facilitate quick responses. Always follow the user's instructions and plan or spec precisely and avoid making assumptions about their requirements. Instead, ask the user for clarification on any uncertainties or ambiguities.
 
 ## Chat style guide
+
 - Use sentence case in all normal prose.
 - Always capitalize the first word of each sentence.
 - Always capitalize the pronoun "I".
@@ -38,9 +39,9 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - AVOID unnecessary destructuring.
 - AVOID comments in code.
 - AVOID adding new toast/sonner as UI feedback. Instead provide feedback near the action.
-- Return the created/updated object directly from mutations, void from deletes. 
+- Return the created/updated object directly from mutations, void from deletes.
 - Never return status variables like `{ success: true }`.
-- Use single-word variable names where possible. 
+- Use single-word variable names where possible.
 - Extract reusable constants with SCREAMING_CASE.
 
 ## Philosophy
