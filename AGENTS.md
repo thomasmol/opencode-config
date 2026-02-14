@@ -29,27 +29,19 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 
 ## Code style guide
 
-- Use sentence case for user-facing text and comments.
-- Capitalize proper nouns and product names correctly (e.g. GitHub).
-- Keep copy concise and clear, but grammatically correct.
-- When writing copy use sentence case instead and casing for names (e.g., "Click here to create a Stripe user.")
-- AVOID using title casing in sentences (NOT: "This Is A Sentence", BUT: "This is a sentence")
-- Try to keep things in one function unless composable or reusable
-- DO NOT do unnecessary destructuring of variables
-- DO NOT use `else` statements unless necessary
-- DO NOT use `try`/`catch` if it can be avoided
-- AVOID returning status variables like { success: true } in methods or functions
-- Always return the created or updated object directly
-- Always return void for delete methods and functions
-- AVOID toast/sonner as feedback mechanisms in ui/ux
-- AVOID wrapper functions that do little more than call another function
-- AVOID `try`/`catch` where possible
-- AVOID `else` statements
-- AVOID using `any` type or `unknown` type casting
-- AVOID `let` statements
-- AVOID adding new comments in code
-- Always use single word variable names where possible
-- Extract reusable constants with SCREAMING_CASE
+- Use sentence case in headers, copy, and other text.
+- AVOID title casing in sentences and headings, except for names and acronyms.
+- AVOID `else` statements unless necessary.
+- AVOID `try`/`catch` where possible.
+- AVOID `let`, prefer `const`.
+- AVOID `any` type or `unknown` type casting.
+- AVOID unnecessary destructuring.
+- AVOID comments in code.
+- AVOID adding new toast/sonner as UI feedback. Instead provide feedback near the action.
+- Return the created/updated object directly from mutations, void from deletes. 
+- Never return status variables like `{ success: true }`.
+- Use single-word variable names where possible. 
+- Extract reusable constants with SCREAMING_CASE.
 
 ## Philosophy
 
