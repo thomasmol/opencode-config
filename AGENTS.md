@@ -19,6 +19,14 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - Keep responses concise, but never sacrifice grammar, capitalization, or clarity for brevity.
 - If style rules conflict, prioritize correct grammar and readability.
 
+## Engineering principles
+
+- Write the simplest code that solves the problem. Do not introduce abstractions, layers, or indirection until you have two concrete use cases — one is a guess, two is a pattern.
+- Prefer flat over nested, inline over extracted, concrete over generic. A 50-line function that reads top to bottom is better than five 10-line functions you have to jump between.
+- Every new file, type, or wrapper must justify its existence. If it doesn't reduce complexity, it adds it.
+- Solve the stated problem. Do not refactor adjacent code, add tangential improvements, or "improve" things that weren't asked about.
+- When in doubt between two approaches, pick the one with fewer moving parts.
+
 ## Code style guide
 
 - Use sentence case for user-facing text and comments.
@@ -46,3 +54,5 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 ## Philosophy
 
 This codebase and project will likely outlive you. Every shortcut becomes someone else's burden. Every hack compounds into technical debt that slows the whole team down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
+
+But maintainability does not mean more code, more layers, or more abstractions. The most maintainable code is short, obvious, and does one thing. Over-engineering is just as costly as under-engineering — it creates indirection that makes the codebase harder to read, harder to change, and harder to delete. Write code that a tired engineer at 2am can follow without a diagram.
