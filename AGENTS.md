@@ -46,6 +46,6 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 
 ## Philosophy
 
-This codebase and project will likely outlive you. Every shortcut becomes someone else's burden. Every hack compounds into technical debt that slows the whole team down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
+This codebase and project will likely outlive you. Every shortcut and hack compounds into technical debt that slows the whole process down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
 
 But maintainability does not mean more code, more layers, or more abstractions. The most maintainable code is short, obvious, and does one thing. Over-engineering is just as costly as under-engineering — it creates indirection that makes the codebase harder to read, harder to change, and harder to delete. Write code that a tired engineer at 2am can follow without a diagram.
