@@ -34,6 +34,8 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - AVOID title casing in sentences and headings, except for names and acronyms.
 - AVOID `else` statements unless necessary.
 - AVOID `try`/`catch` where possible.
+- AVOID `.catch` statements unless necessary.
+- AVOID `.then` statements unless necessary.
 - AVOID `let`, prefer `const`.
 - AVOID `any` type or `unknown` type casting.
 - AVOID unnecessary destructuring.
