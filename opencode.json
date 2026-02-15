@@ -79,6 +79,11 @@
       }
     },
     "svelte-file-editor": {
+      "tools": {
+        "bash": true,
+        "read": true,
+        "write": true
+      },
       "permission": {
         "bash": {
           "*": "allow",
