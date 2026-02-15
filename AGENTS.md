@@ -33,9 +33,9 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - Use sentence case in headers, copy, and other text.
 - AVOID title casing in sentences and headings, except for names and acronyms.
 - AVOID `else` statements unless necessary.
-- AVOID `try`/`catch` where possible.
-- AVOID `.catch` statements unless necessary.
-- AVOID `.then` statements unless necessary.
+- Prefer `async`/`await` over `.then()`/`.catch()` chains.
+- Let errors propagate naturally. Handle them at boundaries (API route handlers, event handlers, top-level entry points), not at every call site.
+- When you must catch, use `try`/`catch` with `await`, never `.catch()` on an awaited promise.
 - AVOID `let`, prefer `const`.
 - AVOID `any` type or `unknown` type casting.
 - AVOID unnecessary destructuring.
