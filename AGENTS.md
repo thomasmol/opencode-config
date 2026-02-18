@@ -27,6 +27,8 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - Every new file, type, or wrapper must justify its existence. If it doesn't reduce complexity, it adds it.
 - Solve the stated problem. Do not refactor adjacent code, add tangential improvements, or "improve" things that weren't asked about.
 - When in doubt between two approaches, pick the one with fewer moving parts.
+- Do not add fallbacks. If the primary path fails, surface the error — do not silently try an alternative.
+- Do not preserve backwards compatibility unless explicitly asked.
 
 ## Code style guide
 
