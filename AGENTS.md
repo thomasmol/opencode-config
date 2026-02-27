@@ -2,23 +2,20 @@ Here are some general instructions to improve our collaboration:
 
 Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you have not done so already.
 
-## When we are planning or creating a spec
+## Workflow
 
-Examine existing code for guidance regarding implementation preferences and practices. After making the plan and todos, always uncover unanswered questions or ambiguities in the plan by asking the user for clarification. This ensures that the plan is clear and actionable before proceeding to execution mode. Be as concise as possible when asking for clarification.
-
-## When we are building
-
-If you encounter any uncertainties or ambiguities in the plan or tasks, promptly ask the user for clarification. This helps to ensure that the implementation aligns with the user's expectations and requirements. Keep your questions focused and to the point to facilitate quick responses. Always follow the user's instructions and plan or spec precisely and avoid making assumptions about their requirements. Instead, ask the user for clarification on any uncertainties or ambiguities.
+- Start tasks with creating a plan. The plan can be short or involve back-and-forth. The user can help you with planning. Ask clarifying questions to the user, iterate until the approach is clear.
+- For bugs and issues, investigate first. Read relevant files, trace the behavior, and understand what's happening. Then propose a fix if asked.
+- Examine existing code for guidance regarding implementation preferences and practices.
+- Start writing or editing code when asked to build, implement, or fix something. If the user asks "why does this happen?" or "can you find the bug?" — investigate and explain, do not change code yet.
+- Do not make assumptions. Ask the user for clarification on uncertainties. If you have trouble finding where something lives or how something works, ask the user to point you to the relevant files or docs.
+- Follow the user's instructions and plan precisely.
 
 ## Chat style guide
 
-- Use sentence case in all normal prose.
-- Always capitalize the first word of each sentence.
-- Always capitalize the pronoun "I".
-- Use proper punctuation.
-- Do not write regular sentences in Title Case (e.g., not "This Is A Sentence").
-- Keep responses concise, but never sacrifice grammar, capitalization, or clarity for brevity.
-- If style rules conflict, prioritize correct grammar and readability.
+- Use sentence case in all prose. Do not title-case sentences or headings (except names and acronyms).
+- Use proper grammar, capitalization, and punctuation. Do not sacrifice clarity for brevity.
+- Keep responses concise.
 
 ## Engineering principles
 
@@ -29,11 +26,13 @@ If you encounter any uncertainties or ambiguities in the plan or tasks, promptly
 - When in doubt between two approaches, pick the one with fewer moving parts.
 - Do not add fallbacks. If the primary path fails, surface the error — do not silently try an alternative.
 - Do not preserve backwards compatibility unless explicitly asked.
+- Do not handle edge cases speculatively. Only handle an edge case if there is evidence it can actually occur. If you feel an edge case needs handling, explain why before adding code for it.
+- Resist the urge to make code "robust" by adding layers of validation, fallbacks, or defensive checks that aren't justified by the current requirements. Each one adds complexity. Ask: "what concrete scenario does this protect against?" If you can't answer, don't add it.
+- When you find yourself writing more code than expected, stop and reconsider. Look for a simpler approach first. Explain to the user why the problem is more complex than it appears, if it genuinely is, rather than silently producing a large solution.
 
 ## Code style guide
 
 - Use sentence case in headers, copy, and other text.
-- AVOID title casing in sentences and headings, except for names and acronyms.
 - AVOID `else` statements unless necessary.
 - Prefer `async`/`await` over `.then()`/`.catch()` chains.
 - Let errors propagate naturally. Handle them at boundaries (API route handlers, event handlers, top-level entry points), not at every call site.
