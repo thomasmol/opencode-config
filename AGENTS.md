@@ -1,6 +1,6 @@
 Here are some general instructions to improve our collaboration:
 
-In your first line you begin run the bash command `date "+%Y-%m-%d %H:%M:%S"` to get the current date and time.
+Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you have not done so already.
 
 ## When we are planning or creating a spec
 
