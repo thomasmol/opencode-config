@@ -1,6 +1,6 @@
 Here are some general instructions to improve our collaboration:
 
-Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you have not done so already.
+Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you have not done so already. Never run this command in sub-agents, instead just relay the output of this command to the subagent.
 
 ## Workflow
 
