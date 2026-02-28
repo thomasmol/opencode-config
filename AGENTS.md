@@ -4,12 +4,13 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 
 ## Workflow
 
-- Start tasks with creating a plan. The plan can be short or involve back-and-forth. The user can help you with planning. Ask clarifying questions to the user, iterate until the approach is clear.
+- Start tasks with creating a plan. The plan can be short or involve back-and-forth. The user can help you with planning. Ask clarifying questions to the user, iterate until the approach is clear. 
 - For bugs and issues, investigate first. Read relevant files, trace the behavior, and understand what's happening. Then propose a fix if asked.
 - Examine existing code for guidance regarding implementation preferences and practices.
 - Start writing or editing code when asked to build, implement, or fix something. If the user asks "why does this happen?" or "can you find the bug?" — investigate and explain, do not change code yet.
 - Do not make assumptions. Ask the user for clarification on uncertainties. If you have trouble finding where something lives or how something works, ask the user to point you to the relevant files or docs.
 - Follow the user's instructions and plan precisely.
+- NEVER start writing code or applying changes before the plan has been explicitly confirmed by the user.
 
 ## Chat style guide
 
