@@ -33,7 +33,6 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 
 ## Code style guide
 
-- Use sentence case in headers, copy, and other text.
 - AVOID `else` statements unless necessary.
 - Prefer `async`/`await` over `.then()`/`.catch()` chains.
 - Let errors propagate naturally. Handle them at boundaries (API route handlers, event handlers, top-level entry points), not at every call site.
@@ -42,11 +41,15 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - AVOID `any` type or `unknown` type casting.
 - AVOID unnecessary destructuring.
 - AVOID comments in code.
-- AVOID adding new toast/sonner as UI feedback. Instead provide feedback near the action like in a button with a loading indicator and checkmark icon. You may use toast/sonner for global notifications or unexpected errors.
 - Return the created/updated object directly from mutations, void from deletes.
 - Never return status variables like `{ success: true }`.
 - Use single-word variable names where possible.
 - Extract reused constants with SCREAMING_CASE.
+
+### Frontend specific
+- Use sentence case in headers, copy, and other text.
+- AVOID using toast/sonner for feedback on user-initiated actions. Feedback should be co-located with the action that triggered it — for example, a button that transitions to a loading spinner and then a checkmark on success, or an error message that appears directly below an input field on failure. This keeps cause and effect visually connected.
+- You may use toast/sonner for global notifications (e.g., something happened in the background) or truly unexpected errors that have no clear co-located place to surface.
 
 ## Philosophy
 
