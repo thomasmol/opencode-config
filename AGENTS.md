@@ -42,11 +42,11 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - AVOID `any` type or `unknown` type casting.
 - AVOID unnecessary destructuring.
 - AVOID comments in code.
-- AVOID adding new toast/sonner as UI feedback. Instead provide feedback near the action.
+- AVOID adding new toast/sonner as UI feedback. Instead provide feedback near the action like in a button with a loading indicator and checkmark icon. You may use toast/sonner for global notifications or unexpected errors.
 - Return the created/updated object directly from mutations, void from deletes.
 - Never return status variables like `{ success: true }`.
 - Use single-word variable names where possible.
-- Extract reusable constants with SCREAMING_CASE.
+- Extract reused constants with SCREAMING_CASE.
 
 ## Philosophy
 
