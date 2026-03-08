@@ -1,11 +1,13 @@
 ---
 name: linear
-description: Create, read, update, and list Linear issues using GraphQL API. Use when user requests to create, read, update, or list Linear issues, tickets, or tasks.
+description: Create, read, update, and list Linear issues. Use when user requests to create, read, update, or list Linear projects, issues, tickets, or tasks.
 ---
 
 ## What I do
 
-Create, read, update, and list Linear issues via GraphQL API. By default search the `ENG` team or browse teams first.
+- Create, read, update, and list Linear issues via GraphQL API using CURL commands. 
+- Always give the title or some short description of the issue when showing it, not just the identifier.
+- Be careful with creating and updating issues: confirm the details before submitting.
 
 ## Authentication
 
@@ -15,7 +17,7 @@ Endpoint: `https://api.linear.app/graphql`
 
 ## List issues
 
-Get team ID first, then query issues:
+If you don't know the team ID, you can list all teams first and then query issues for a specific team.
 
 ```graphql
 query Teams {
