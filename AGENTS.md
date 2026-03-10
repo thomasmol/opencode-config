@@ -46,11 +46,6 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - Use single-word variable names where possible.
 - Extract reused constants with SCREAMING_CASE.
 
-### Frontend specific
-- Use sentence case in headers, copy, and other text.
-- AVOID using toast/sonner for feedback on user-initiated actions. Feedback should be co-located with the action that triggered it — for example, a button that transitions to a loading spinner and then a checkmark on success, or an error message that appears directly below an input field on failure. This keeps cause and effect visually connected.
-- You may use toast/sonner for global notifications (e.g., something happened in the background) or truly unexpected errors that have no clear co-located place to surface.
-
 ## Philosophy
 
 This codebase and project will likely outlive you. Every shortcut and hack compounds into technical debt that slows the whole process down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
