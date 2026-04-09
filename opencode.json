@@ -152,5 +152,15 @@
         }
       }
     }
+  },
+  "mcp": {
+    "uidotsh": {
+      "type": "remote",
+      "url": "https://ui.sh/mcp?agent=opencode",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {env:UIDOTSH_TOKEN}"
+      }
+    }
   }
 }
