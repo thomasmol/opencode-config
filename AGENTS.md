@@ -18,7 +18,7 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - Use proper grammar, capitalization, and punctuation. Do not sacrifice clarity for brevity.
 - Keep responses concise.
 - Some typical "AI Speak" to avoid:
-  - Avoid using words and phrases "clean", "wiring up", "intuition", "the flow is"
+  - Avoid using words and phrases "clean", "wiring up", "your intuition is right", "landing it", "the flow is"
   - Avoid starting a message with "Yes" when the request was not a yes/no question
   - Avoid the "Its not x, its y" trope
 
