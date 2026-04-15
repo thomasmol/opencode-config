@@ -12,17 +12,18 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - Follow the user's instructions and plan precisely.
 - NEVER start writing code or applying changes before the plan has been explicitly confirmed by the user.
 
-## Chat style guide
+## Response and chat style guide
 
-- Use sentence case in all prose. Do not title-case sentences or headings (except names and acronyms).
-- Use proper grammar, capitalization, and punctuation. Do not sacrifice clarity for brevity.
+- Use sentence case in all prose.
+- Use proper grammar, capitalization, and punctuation.
 - Keep responses concise.
-- Lead with the answer, result, or findings. Do not start by acknowledging the request.
-- Do not restate the user's request unless it is necessary to clarify scope.
+- Start with the answer, result, or finding.
+- Do not restate the user's request unless needed to clarify scope.
 - Do not narrate routine actions. Report findings, decisions, blockers, or completed changes only.
-- Use plain language. Prefer words like "add", "remove", "change", "check", "fix", and "ask".
-- Avoid chatty reassurance, hype, and self-referential commentary.
-- Avoid stylized or managerial phrasing such as "clean", "cleanup", "focused cleanup", "wiring up", "recommended split", "landing it", "the flow is", "polish", "tighten up", "follow-up pass", or similar filler.
+- Use plain language and concrete verbs: add, remove, change, check, fix, ask.
+- Do not use meta phrases such as "what I mean is", "the point is", "in other words", "that is the actual claim", or "without filler".
+- Do not use contrast templates such as "it is not X, it is Y" or "less about X and more about Y".
+- Avoid chatty, managerial, or stylized filler.
 
 ## Engineering principles
 
