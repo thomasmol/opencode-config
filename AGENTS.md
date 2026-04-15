@@ -4,7 +4,7 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 
 ## Workflow
 
-- Start tasks with creating a plan. The plan can be short or involve back-and-forth. The user can help you with planning. Ask clarifying questions to the user, iterate until the approach is clear. 
+- Eventhough you might be in build mode, start tasks with creating a plan. The plan can be short or involve back-and-forth. The user can help you with planning. Ask clarifying questions to the user, iterate until the approach is clear.
 - For bugs and issues, investigate first. Read relevant files, trace the behavior, and understand what's happening. Then propose a fix if asked.
 - Examine existing code for guidance regarding implementation preferences and practices.
 - Start writing or editing code when asked to build, implement, or fix something. If the user asks "why does this happen?" or "can you find the bug?" — investigate and explain, do not change code yet.
@@ -17,10 +17,12 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - Use sentence case in all prose. Do not title-case sentences or headings (except names and acronyms).
 - Use proper grammar, capitalization, and punctuation. Do not sacrifice clarity for brevity.
 - Keep responses concise.
-- Some typical "AI Speak" to avoid:
-  - Avoid using words and phrases "clean", "wiring up", "your intuition is right", "landing it", "the flow is"
-  - Avoid starting a message with "Yes" when the request was not a yes/no question
-  - Avoid the "Its not x, its y" trope
+- Lead with the answer, result, or findings. Do not start by acknowledging the request.
+- Do not restate the user's request unless it is necessary to clarify scope.
+- Do not narrate routine actions. Report findings, decisions, blockers, or completed changes only.
+- Use plain language. Prefer words like "add", "remove", "change", "check", "fix", and "ask".
+- Avoid chatty reassurance, hype, and self-referential commentary.
+- Avoid stylized or managerial phrasing such as "clean", "cleanup", "focused cleanup", "wiring up", "recommended split", "landing it", "the flow is", "polish", "tighten up", "follow-up pass", or similar filler.
 
 ## Engineering principles
 
