@@ -29,11 +29,10 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 
 ## Engineering principles
 
-- Write the simplest code that solves the problem. Do not introduce abstractions, layers, or indirection until you have two concrete use cases — one is a guess, two is a pattern.
+- Do not introduce abstractions, layers, or indirection until you have two concrete use cases — one is a guess, two is a pattern.
 - Prefer flat over nested, inline over extracted, concrete over generic. A 50-line function that reads top to bottom is better than five 10-line functions you have to jump between.
 - Every new file, type, or wrapper must justify its existence. If it doesn't reduce complexity, it adds it.
 - Solve the stated problem. Do not refactor adjacent code, add tangential improvements, or "improve" things that weren't asked about.
-- When in doubt between two approaches, pick the one with fewer moving parts.
 - Do not add fallbacks. If the primary path fails, surface the error — do not silently try an alternative.
 - Do not preserve backwards compatibility unless explicitly asked.
 - Do not handle edge cases speculatively. Only handle an edge case if there is evidence it can actually occur. If you feel an edge case needs handling, explain why before adding code for it.
@@ -54,9 +53,3 @@ Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you
 - Never return status variables like `{ success: true }`.
 - Use single-word variable names where possible.
 - Extract reused constants with SCREAMING_CASE.
-
-## Philosophy
-
-This codebase and project will likely outlive you. Every shortcut and hack compounds into technical debt that slows the whole process down. This means patterns we establish will be copied. Therefore you may prioritize design over implementation, when we are building something new, for the sake of future maintainability.
-
-But maintainability does not mean more code, more layers, or more abstractions. The most maintainable code is short, obvious, and does one thing. Over-engineering is just as costly as under-engineering — it creates indirection that makes the codebase harder to read, harder to change, and harder to delete. Write code that a tired engineer at 2am can follow without a diagram.
