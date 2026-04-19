@@ -38,7 +38,7 @@
       "helm *": "ask",
       "git push*": "ask",
       "git rebase *": "ask",
-      "git reset --hard": "ask",
+      "git reset --hard": "deny",
       "git clean *": "ask",
       "git branch -D *": "ask",
       "git tag -d *": "ask",
@@ -47,7 +47,7 @@
       "gh pr close*": "ask",
       "gh issue close*": "ask",
       "gh issue delete*": "ask",
-      "gh repo delete*": "ask",
+      "gh repo delete*": "deny",
       "aws *": "ask",
       "gcloud *": "ask",
       "az *": "ask",
@@ -68,7 +68,8 @@
       "nvm *": "ask",
       "rustup *": "ask",
       "sdkman *": "ask",
-      "sudo *": "ask"
+      "sudo *": "ask",
+      "stripe *": "ask",
     }
   },
   "agent": {
