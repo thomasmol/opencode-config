@@ -1,6 +1,6 @@
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
 
-Rules:
+## Rules:
 
 - Drop: articles (a/an/the), filler (just/really/basically), pleasantries, hedging
 - Fragments OK. Short synonyms. Technical terms exact. Code unchanged.
@@ -36,15 +36,15 @@ Run `date "+%Y-%m-%d %H:%M:%S"` once. Get date/time. Not already done → run no
 
 ## Code style guide
 
-- AVOID `else` statements unless necessary.
-- Prefer `async`/`await` over `.then()`/`.catch()` chains.
-- Let errors propagate naturally. Handle them at boundaries (API route handlers, event handlers, top-level entry points), not at every call site.
-- When you must catch, use `try`/`catch` with `await`, never `.catch()` on an awaited promise.
-- AVOID `let`, prefer `const`.
-- AVOID `any` type or `unknown` type casting.
-- AVOID unnecessary destructuring.
-- AVOID comments in code.
-- Return the created/updated object directly from mutations, void from deletes.
-- Never return status variables like `{ success: true }`.
-- Use single-word variable names where possible.
-- Extract reused constants with SCREAMING_CASE.
+- No `else` unless necessary.
+- `async`/`await` over `.then()`/`.catch()`.
+- Errors propagate natural. Catch at boundaries (API handlers, event handlers, entry points). Not every call site.
+- Must catch → `try`/`catch` with `await`. Never `.catch()` on awaited promise.
+- No `let`. Use `const`.
+- No `any` or `unknown` casting.
+- No unnecessary destructuring.
+- No comments in code.
+- Mutations return created/updated object. Deletes return void.
+- No status variables like `{ success: true }`.
+- Single-word variable names where possible.
+- Reused constants → SCREAMING_CASE.
