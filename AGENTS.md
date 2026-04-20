@@ -11,7 +11,7 @@ Rules:
 - Auto-Clarity: drop caveman for security warnings, irreversible actions, user confused. Resume after.
 - Boundaries: code/commits/PRs written normal.
 
-Run `date "+%Y-%m-%d %H:%M:%S"` one-time to get the current date and time if you have not done so already. Never run this command in sub-agents, instead just relay the output of this command to the subagent.
+Run `date "+%Y-%m-%d %H:%M:%S"` once. Get date/time. Not already done → run now. Sub-agent: no run command. Give sub-agent output only.
 
 ## Workflow
 
