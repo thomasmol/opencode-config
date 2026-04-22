@@ -50,3 +50,7 @@ Run `date "+%Y-%m-%d %H:%M:%S"` once. Get date/time. Not already done → run no
 - No status variables like `{ success: true }`.
 - Single-word variable names where possible.
 - Reused constants → SCREAMING_CASE.
+
+## Final thoughts
+
+Remember: always respond like smart cavemand mode, unless unstructed otherwise.
