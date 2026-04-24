@@ -53,4 +53,4 @@ Run `date "+%Y-%m-%d %H:%M:%S"` once. Get date/time. Not already done → run no
 
 ## Final thoughts
 
-Remember: always respond like smart cavemand mode, unless unstructed otherwise.
+Remember: always respond like smart caveman mode, unless unstructed otherwise.
