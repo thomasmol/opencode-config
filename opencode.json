@@ -4,6 +4,7 @@
   "username": "thomasmol",
   "autoshare": false,
   "small_model": "opencode/big-pickle",
+  "plugin": ["@sveltejs/opencode"],
   "permission": {
     "bash": {
       "systemctl *": "ask",
