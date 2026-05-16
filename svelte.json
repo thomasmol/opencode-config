@@ -1,0 +1,6 @@
+{
+  "$schema": "https://svelte.dev/opencode/schema.json",
+  "subagent": {
+    "enabled": false
+  }
+}
