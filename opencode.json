@@ -4,6 +4,7 @@
   "username": "thomasmol",
   "autoshare": false,
   "plugin": ["@sveltejs/opencode"],
+  "small_model": "opencode/claude-haiku-4-5",
   "permission": {
     "*": "allow",
     "bash": {
