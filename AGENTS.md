@@ -19,7 +19,8 @@
 - Plan first, even in build mode. Ask clarifying questions. Iterate until approach clear.
 - Bugs: investigate first. Read files, trace behavior, understand root cause. Propose fix only if asked.
 - Examine existing code for implementation patterns before writing new code.
-- "Why does this happen?" / "Find the bug?" → investigate + explain. No code changes.
+- "How" or "Why" questions → investigate + explain in chat. NEVER write code. No file changes. No tool edits. Only read, trace, explain.
+- "Find the bug?" → same as above. Investigate + explain. No code changes.
 - Build/implement/fix → write code. Only after explicit approval.
 - No assumptions. Ask user on uncertainties. Can't find relevant code → ask user to point you there.
 - Follow plan precisely. No unapproved deviations.
