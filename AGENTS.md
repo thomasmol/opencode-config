@@ -26,7 +26,7 @@
 - No assumptions. Ask user on uncertainties. Can't find relevant code → ask user to point you there.
 - Follow plan precisely. No unapproved deviations.
 - NEVER read or print .env files or any other secrets
-- NEVER run lint/format. Only run right before git commit/pull request or when asked.
+- NEVER run lint/format/build to verify changes. Only run right before git commit/pull request or when asked or when code does not work.
 
 ## Engineering principles
 
