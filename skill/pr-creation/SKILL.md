@@ -5,15 +5,69 @@ description: Create (draft) pull requests on GitHub. Use when user requests to c
 
 ## What I do
 
-- Create draft pull requests to the main or master branch on GitHub for code changes using the GitHub CLI (`gh pr create --draft`).
-- Add a relevent title with proper prefixes (choose from: "feat:", "fix:", "chore:", "refactor:", "docs:") based on the type of changes made.
-- If currently on the main or master branch, create a new branch with relevant name and prefix (choose from: "feat/", "fix/", "chore/", "refactor/", "docs/") and commit before creating the draft PR.
-- Add a description with a summary of the changes made. Do not add generic titles or headers like "Draft PR" or "Changes made" or "Summary". Just list the changes and refer to methods, files, classes for references where needed.
-- Link (Linear) issues by ids if specified by adding "Closes ISSUE_ID ISSUE_ID_2" in the description. Ask for issue ids if not provided. ID might be provided by the user or automatically extracted from the branch name.
-- Return the URL of the created draft pull request.
-- Prefer using the GitHub CLI (`gh pr create --draft`) over the git cli for creating draft pull requests.
+Create a draft pull request using GitHub CLI. Assume code is done. Do not make code changes, format changes, config changes, commits, branch changes, or push changes when this skill is active.
+
+## Workflow
+
+Run only minimal git/GitHub CLI checks needed for PR creation.
+
+1. Check current branch.
+
+```sh
+git branch --show-current
+```
+
+Stop if current branch is `main`, `master`, `staging`, `production`, or repo default branch. Inform user PR cannot be created from default/protected branch. Suggest creating a feature branch from committed work.
+
+2. Check repo default branch.
+
+```sh
+gh repo view --json defaultBranchRef --jq .defaultBranchRef.name
+```
+
+Use this branch as PR base unless user specified another base.
+
+3. Check uncommitted changes.
+
+```sh
+git status --porcelain
+```
+
+Stop if output is non-empty. Inform user uncommitted changes exist. Ask whether they want to commit/stash/discard manually before PR creation.
+
+4. Check unpushed commits/upstream state.
+
+```sh
+git status -sb
+```
+
+Stop if output shows ahead commits, no upstream, or branch not pushed. Inform user branch must be pushed before PR creation. Suggest `git push -u origin <current-branch>`.
+
+5. Inspect diff against base branch for PR title/body only.
+
+```sh
+git fetch origin
+git diff --stat origin/<base-branch>...HEAD
+git diff origin/<base-branch>...HEAD
+```
+
+Use diff and branchname to create specific title/body. Do not edit files.
+
+6. Create draft PR.
+
+```sh
+gh pr create --draft --base <base-branch> --title "feature: specific title" --body $'- Specific change with file/method/class references\n- Another specific change\n\nCloses ISSUE_ID'
+```
+
+## PR content rules
+
+- Title prefix must match change type: `feature:`, `fix:`, `chore:`, `refactor:`, `docs:`.
+- Body must be specific. Mention relevant files, methods, classes, behavior changes.
+- Do not add generic headings like `Draft PR`, `Changes made`, or `Summary`.
+- Link Linear issues with `Closes ISSUE_ID ISSUE_ID_2` when issue ids are provided or extractable from branch name.
+- Ask for issue ids only if user asked to link issue ids but none are provided or extractable.
+- Return created draft PR URL.
 
 ## When to use me
 
-- Use me when you want to create a (draft) pull request on GitHub for your code changes.
-- If my current branch is the main or master branch, create a new branch with relevant name and prefix (choose from: "feat/", "fix/", "chore/", "refactor/") before creating the draft PR.
+Use when user requests creating a PR, pull request, draft PR, or draft pull request for already-finished work.
