@@ -31,14 +31,12 @@
 
 ## Engineering principles
 
-- No abstractions/layers/indirection without two concrete use cases. One = guess. Two = pattern.
+- No abstractions/layers/indirection/wrapping/extraction without two concrete use cases.
 - Flat over nested. Inline over extracted. Concrete over generic.
-- Solve stated problem only. No adjacent refactors, tangential improvements, unsolicited "fixes".
+- Solve stated problem only. No adjacent refactors, no tangential improvements, no unsolicited "fixes".
 - No fallbacks. Primary path fails → surface error. No silent alternatives.
-- No backward compatibility unless asked.
 - No speculative edge case handling. Evidence required. If edge case feels necessary, explain before coding it.
-- No "robustness" layers — validation, fallbacks, defensive checks need concrete justification. Ask: "what scenario does this protect against?" No answer → don't add.
-- Implementation ballooning → stop. Find simpler path first. If problem genuinely complex, explain before producing large solution.
+- No "robustness" layers — validation, fallbacks, defensive checks need concrete justification.
 
 ## Code style guide
 
