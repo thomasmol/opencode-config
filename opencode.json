@@ -4,8 +4,6 @@
   "username": "thomasmol",
   "autoshare": false,
   "plugin": ["@sveltejs/opencode"],
-  "model": "openai/gpt-5.5",
-  "small_model": "opencode/big-pickle",
   "permission": {
     "*": "allow",
     "bash": {
