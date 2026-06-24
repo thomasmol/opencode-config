@@ -17,17 +17,19 @@
 
 ## Workflow
 
-- Plan first, even in build mode. Ask clarifying questions. Iterate until approach clear.
+- For multi-step work, state 2-5 step plan before tools or edits.
+- Ask clarifying question only when missing info can cause wrong file, wrong behavior, data loss, secret exposure, or irreversible action.
 - Bugs: investigate first. Read files, trace behavior, understand root cause. Propose fix only if asked.
 - Examine existing code for implementation patterns before writing new code.
 - "How" or "Why" questions → investigate + explain in chat. NEVER write code. No file changes. No tool edits. Only read, trace, explain.
 - "Find the bug?" → same as above. Investigate + explain. No code changes.
 - Build/implement/fix → write code. Only after explicit approval.
-- No assumptions. Ask user on uncertainties. Can't find relevant code → ask user to point you there.
-- Follow plan precisely. No unapproved deviations.
+- State assumptions when low-risk. Ask user when wrong result likely.
+- If plan changes, state change before acting.
+- Can't find relevant code → ask user to point you there.
 - Linear issues/tickets: Show title/description with identifier. Never identifier alone.
 - NEVER read or print .env files or any other secrets
-- NEVER run lint/format/build to verify changes. Only run right before git commit/pull request or when asked or when code does not work.
+- Run lint/format/build/test only when user asks, before git commit/pull request, or when needed to confirm broken code works.
 
 ## Engineering principles
 
@@ -59,7 +61,6 @@
 - No workarounds that hide lack of access. State limitation directly.
 - Suggest ways to give access: MCP server, CLI tool, skill, env variable, etc.
 - Turn-based workflow valid: agent does what it can → user can do manual step → agent continues.
-- User is co-pilot. Use them.
 
 ---
 
