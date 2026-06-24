@@ -1,27 +1,23 @@
 import type { Plugin } from "@opencode-ai/plugin";
 
-export const CurrentTimePlugin: Plugin = async ({ client }) => {
+export const CurrentTimePlugin: Plugin = async () => {
   return {
-    event: async ({ event }) => {
-      if (event.type !== "session.created") return;
-
-      const now = new Date().toLocaleString("sv-SE", {
-        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    "experimental.chat.system.transform": async (_input, output) => {
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const date = new Date();
+      const day = date.toLocaleDateString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone,
+      });
+      const time = date.toLocaleTimeString("en-GB", {
+        timeZone,
         hour12: false,
       });
 
-      await client.session.prompt({
-        path: { id: event.properties.info.id },
-        body: {
-          noReply: true,
-          parts: [
-            {
-              type: "text",
-              text: `Current local datetime: ${now}`,
-            },
-          ],
-        },
-      });
+      output.system.push(`Current local datetime: ${day} - ${time} - ${timeZone}`);
     },
   };
 };
