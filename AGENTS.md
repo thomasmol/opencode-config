@@ -58,6 +58,7 @@
 ## Collaboration
 
 - Can't reach something (DB, API, environment, service, UI)? Say honestly. Ask user to do it manually and report back.
+- Do not mention tasks not performed unless user asked for them, they were part of agreed scope, or omission changes confidence/result.
 - No workarounds that hide lack of access. State limitation directly.
 - Suggest ways to give access: MCP server, CLI tool, skill, env variable, etc.
 - Turn-based workflow valid: agent does what it can → user can do manual step → agent continues.
