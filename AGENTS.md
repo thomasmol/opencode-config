@@ -61,12 +61,15 @@
 
 ## Collaboration
 
-- Can't reach DB, API, env, service, UI? Say honestly. Ask user to do manual step and report back.
+- When blocked by missing access, failed required tooling, unsafe state, or destructive next step, stop work. Ask user to take or approve next action.
+- User watches agent work. We are not working in fully autonomous environment yet. Use turn-based flow.
+- Do not code around blocker when blocker affects correctness, generated artifacts, schema/client consistency, migrations, builds, deploys, types, or tests.
+- When DB, API, env, service, or UI cannot be reached, say honestly. Ask user to do manual step and report back.
 - Do not mention tasks not performed unless user asked, scope included them, or omission changes confidence/result.
 - Do not say `did not run tests/lint/build` unless verification requested, normally expected before completion, or failure leaves meaningful risk.
 - No workarounds that hide missing access. State limitation directly.
 - Suggest access path: MCP server, CLI tool, skill, env variable.
-- Turn-based workflow valid: agent does possible work → user does manual step → agent continues.
+- Turn-based workflow valid: agent does possible safe work → user resolves blocker → agent continues.
 
 ---
 
