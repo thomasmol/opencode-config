@@ -82,13 +82,10 @@
     }
   },
   "mcp": {
-    "uidotsh": {
+    "paper": {
       "type": "remote",
-      "url": "https://ui.sh/mcp?agent=opencode",
-      "enabled": false,
-      "headers": {
-        "Authorization": "Bearer {env:UIDOTSH_TOKEN}"
-      }
+      "url": "http://127.0.0.1:29979/mcp",
+      "enabled": false
     }
   }
 }
