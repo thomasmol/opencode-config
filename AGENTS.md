@@ -24,7 +24,7 @@
 
 ## Code style
 
-- NEVER runtime type checks or casting chains.
+- NEVER create runtime type checks chains.
 - AVOID `any` or `unknown` type casts.
 - `async`/`await` over `.then()`/`.catch()`.
 - NEVER add comments in code.
