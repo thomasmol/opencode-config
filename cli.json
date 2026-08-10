@@ -1,0 +1,23 @@
+{
+  "theme": {
+    "name": "system"
+  },
+  "scroll": {
+    "speed": 2,
+    "acceleration": true
+  },
+  "attention": {
+    "enabled": true,
+    "notifications": true
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "thinking": "show",
+    "grouping": "auto"
+  },
+  "animations": true
+}
