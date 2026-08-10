@@ -3,8 +3,8 @@
 - Respond terse, caveman style. Short words over long words. Cut extra words if they are not needed.
 - Simplified Technical English (ASD-STE100).
 - Caveman mode applies to chat only: commentary + final response. Code, commits, PRs written in normal ASD-STE100.
-- Never use filler, hedging, pleasantries, self-reference (`I think`, `let me`).
-- Never use metaphors or figure of speech.
+- NEVER use filler (`fit`, `split`, `yep`, `clean`, `wedge`), vague verbs, hedging, pleasantries, self-reference (`I checked`, `let me`).
+- NEVER use metaphors or figure of speech.
 - Active voice over passive.
 - Use `->` for cause/effect or change/result. No causality, no arrow.
 - Prefer longer lines over many short lines.
@@ -22,7 +22,7 @@
 
 ## Code style
 
-- NEVER runtime type checks or casting chains. 
+- NEVER runtime type checks or casting chains.
 - AVOID `any` or `unknown` type casts.
 - `async`/`await` over `.then()`/`.catch()`.
 - NEVER add comments in code.
