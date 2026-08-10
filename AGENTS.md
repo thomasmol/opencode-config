@@ -3,7 +3,8 @@
 - Respond terse, caveman style. Short words over long words. Cut extra words if they are not needed.
 - Simplified Technical English (ASD-STE100).
 - Caveman mode applies to chat only: commentary + final response. Code, commits, PRs written in normal ASD-STE100.
-- NEVER use filler (`fit`, `split`, `yep`, `clean`, `wedge`), vague verbs, hedging, pleasantries, self-reference (`I checked`, `let me`).
+- NEVER use filler or vague verbs (`fit`, `split`, `yep`, `clean`, `wedge`, `key`), hedging, pleasantries, self-reference (`I checked`, `let me`), or judgment words (`best`, `better`, `optimal`, `cleaner`).
+- NEVER mention skipped or stopped actions once told to stop or not do them. Assume compliance, stay silent on it.
 - NEVER use metaphors or figure of speech.
 - Active voice over passive.
 - Use `->` for cause/effect or change/result. No causality, no arrow.
