@@ -3,13 +3,11 @@ name: pr-creation
 description: Create (draft) pull requests on GitHub. Use when user requests to create a pr, pull request, draft pr, draft pull request.
 ---
 
-## What I do
+## What this skill does
 
 Create a draft pull request using GitHub CLI. Assume code is done. Do not make code changes, format changes, config changes, commits, branch changes, or push changes when this skill is active.
 
 ## Workflow
-
-Run only minimal git/GitHub CLI checks needed for PR creation.
 
 1. Check current branch.
 
@@ -61,13 +59,19 @@ gh pr create --draft --base <base-branch> --title "feature: specific title" --bo
 
 ## PR content rules
 
-- Title prefix must match change type: `feature:`, `fix:`, `chore:`, `refactor:`, `docs:`.
-- Body must be specific. Mention relevant files, methods, classes, behavior changes.
-- Do not add generic headings like `Draft PR`, `Changes made`, or `Summary`.
-- Link Linear issues with `Closes ISSUE_ID ISSUE_ID_2` when issue ids are provided or extractable from branch name.
-- Ask for issue ids only if user asked to link issue ids but none are provided or extractable.
-- Return created draft PR URL.
+Use the Google developer documentation style for PR titles and bodies.
 
-## When to use me
+- The title prefix must match the change type: `feature:`, `fix:`, `chore:`, `refactor:`, or `docs:`. After the prefix, write a concise imperative statement in sentence case with no ending period.
+- Use short, direct sentences in active voice and present tense. State what changed before explaining why.
+- Choose the shortest structure that communicates the change. Use an opening sentence or impact paragraph only when it adds useful context.
+- Use a bulleted list for significant implementation details. Reference relevant files, functions, classes, or components by name using backticks.
+- Address the reader as “you” only when describing a user action.
+- Do not repeat the title. Do not use generic headings such as `Draft PR`, `Changes made`, or `Summary`.
+- Do not use promotional or subjective language such as “simple”, “easy”, or “better”.
+- Link Linear issues with `Closes ISSUE_ID ISSUE_ID_2` when issue IDs are provided or can be extracted from the branch name.
+- Ask for issue IDs only if the user requests issue links but no issue ID is provided or can be extracted.
+- Return the created draft PR URL.
+
+## When to use skill
 
 Use when user requests creating a PR, pull request, draft PR, or draft pull request for already-finished work.
