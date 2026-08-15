@@ -9,6 +9,10 @@ Create a draft pull request using GitHub CLI. Assume code is done. Do not make c
 
 ## Workflow
 
+0. Lint and format
+
+Use the project's linting and formatting tools to check and fix any issues.
+
 1. Check current branch.
 
 ```sh
