@@ -16,7 +16,7 @@
 
 ## Workflow
 
-- ALWAYS plan first, whether debugging or creating a new feature. Wait before users gives the go-ahead to write code.
+- ALWAYS plan first, whether debugging or creating a new feature. Wait before users gives the go-ahead to write code. Don't mention what you are not going to do, especially if its regarding instructions from an AGENTS.md .
 - NEVER write any tests unless user specifically requests them.
 - User asks `Why` / `how` question -> investigate and explain only. No edits, no code, no new files.
 - Bug report -> investigate root cause, state plan. Fix only after approval.
