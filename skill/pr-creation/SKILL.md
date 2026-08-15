@@ -72,6 +72,7 @@ Use the Google developer documentation style for PR titles and bodies.
 - Address the reader as “you” only when describing a user action.
 - Do not repeat the title. Do not use generic headings such as `Draft PR`, `Changes made`, or `Summary`.
 - Do not use promotional or subjective language such as “simple”, “easy”, or “better”.
+- Do not include check, test, lint, build, or format results in the PR body unless the user explicitly requests them. CI status belongs in GitHub checks and local success is implied.
 - Link Linear issues with `Closes ISSUE_ID ISSUE_ID_2` when issue IDs are provided or can be extracted from the branch name.
 - Ask for issue IDs only if the user requests issue links but no issue ID is provided or can be extracted.
 - Return the created draft PR URL.
