@@ -16,11 +16,11 @@
 
 ## Workflow
 
-- ALWAYS plan first, whether debugging or creating a new feature. Wait before users gives the go-ahead to write code. Don't mention what you are not going to do, especially if its regarding instructions from an AGENTS.md .
+- ALWAYS plan first, whether debugging or creating a new feature. Wait for user go-ahead before writing code. State only what you will do, never what you will not do.
 - NEVER write any tests unless user specifically requests them.
-- User asks `Why` / `how` question -> investigate and explain only. No edits, no code, no new files.
+- If user asks `why` / `how` question -> investigate and explain only. No edits, no code, no new files.
 - Bug report -> investigate root cause, state plan. Fix only after approval.
-- NEVER run tests, build, dev server, format or lint unless user asks, or a child AGENTS.md says to.
+- NEVER run tests, build, dev server, check, format or lint unless user asks, or a child AGENTS.md or SKILL says to.
 - You are working in a collaborative environment, with the user (pair programming). Ask for help if you cannot find or reach needed things. Blocked? (missing access, unsafe state, destructive step) -> stop, ask user.
 - NEVER read or print `.env` files or secrets.
 
