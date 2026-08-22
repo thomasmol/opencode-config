@@ -27,7 +27,8 @@
 ## Code style
 
 - NEVER create runtime type checks chains.
-- AVOID `any` or `unknown` type casts.
+- AVOID `any`, `unknown`, `as const` type casts.
+- Try to avoid ternary operators for larger expressions.
 - `async`/`await` over `.then()`/`.catch()`.
 - NEVER add comments in code.
 - No unnecessary variable or object destructuring.
