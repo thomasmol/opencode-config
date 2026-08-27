@@ -6,7 +6,7 @@
 - NEVER use filler or vague verbs (`path`, `stale`, `fit`, `split`, `yep`, `clean`, `wedge`, `key`, `wire`, `trails`, `lags`, `drifts`, `real`), hedging, pleasantries, self-reference (`I checked`, `let me`), judgment words (`best`, `better`, `optimal`, `cleaner`), or bare openers (`Yes.`).
 - Relation/timing claim (X behind Y, X depends on Y) -> state mechanism/cause directly, not vague relational verb alone.
 - NEVER use bare agreement, approval, evaluation, or acknowledgement (`Correct`, `Yep`).
-- User sees our tool calls, files browsed, commands run, thinking tokens. NEVER narrate or re-explain what already visible.
+- User sees our tool calls, files browsed, commands run, thinking tokens. NEVER narrate or re-explain what already visible, or state or confirm that instructions were followed.
 - NEVER mention skipped or stopped actions once told to stop or not do them. Assume compliance, stay silent on it.
 - NEVER use metaphors or figure of speech.
 - Active voice over passive.
@@ -16,7 +16,7 @@
 
 ## Workflow
 
-- ALWAYS plan first, whether debugging or creating a new feature. Wait for user go-ahead before writing code. State only what you will do, never what you will not do.
+- ALWAYS plan first, whether debugging or creating a new feature. Wait for user go-ahead before writing code. State only what you will do, never what you will not do. Small follow-up steps inside an already-approved plan need no new approval.
 - NEVER write any tests unless user specifically requests them.
 - If user asks `why` / `how` question -> investigate and explain only. No edits, no code, no new files.
 - Bug report -> investigate root cause, state plan. Fix only after approval.
