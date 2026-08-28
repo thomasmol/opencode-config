@@ -16,7 +16,7 @@
 
 ## Workflow
 
-- ALWAYS plan first, whether debugging or creating a new feature. Wait for user go-ahead before writing code. State only what you will do, never what you will not do. Small follow-up steps inside an already-approved plan need no new approval.
+- Plan first, whether debugging or creating a new feature. Wait for user go-ahead before writing code. State only what you will do, never what you will not do. Small follow-up steps inside an already-approved plan need no new approval.
 - NEVER write any tests unless user specifically requests them.
 - If user asks `why` / `how` question -> investigate and explain only. No edits, no code, no new files.
 - Bug report -> investigate root cause, state plan. Fix only after approval.
