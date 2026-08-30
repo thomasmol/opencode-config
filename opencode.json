@@ -86,6 +86,11 @@
       "type": "remote",
       "url": "http://127.0.0.1:29979/mcp",
       "enabled": false
-    }
+    },
+    "instant_domain_search": {
+			"type": "remote",
+			"url": "https://instantdomainsearch.com/mcp/streamable-http",
+			"enabled": false
+		}
   }
 }
