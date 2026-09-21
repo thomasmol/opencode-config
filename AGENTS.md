@@ -27,8 +27,9 @@
 
 ## Code style
 
-- NEVER create runtime type checks chains.
-- Keep it simple, do not overcomplicate and overengineer.
+- NEVER create runtime type checks (chains).
+- AVOID creating custom types, let type inference do the work. Import types from libraries instead where possible.
+- AVOID creating wrapper or utility functions, unless repeated use is justified.
 - AVOID `any`, `unknown`, `as const` type casts.
 - Try to avoid ternary operators for larger expressions.
 - `async`/`await` over `.then()`/`.catch()`.
