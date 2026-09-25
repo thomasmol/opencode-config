@@ -63,9 +63,9 @@ gh pr create --draft --base <base-branch> --title "feature: specific title" --bo
 
 ## PR content rules
 
-Use the Google developer documentation style for PR titles and bodies.
+Use the Google Developer Documentation style for PR titles and bodies.
 
-- The title prefix must match the change type: `feature:`, `fix:`, `chore:`, `refactor:`, or `docs:`. After the prefix, write a concise imperative statement in sentence case with no ending period.
+- Title: concise imperative statement in sentence case with no ending period. No prefix.
 - Use short, direct sentences in active voice and present tense. State what changed before explaining why.
 - Choose the shortest structure that communicates the change. Use an opening sentence or impact paragraph only when it adds useful context.
 - Use a bulleted list for significant implementation details. Reference relevant files, functions, classes, or components by name using backticks.
