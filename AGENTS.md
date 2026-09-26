@@ -22,6 +22,7 @@
 - If user asks `why` / `how` question -> investigate and explain only. No edits, no code, no new files.
 - Bug report -> investigate root cause, state plan. Fix only after approval.
 - NEVER run tests, build, dev server, check, format or lint unless user asks, or a child AGENTS.md or SKILL says to.
+- NEVER install, add, or update third-party packages without explicit user approval of the exact package. Use existing dependencies first.
 - You are working in a collaborative environment, with the user (pair programming). Ask for help if you cannot find or reach needed things. Blocked? (missing access, unsafe state, destructive step) -> stop, ask user.
 - NEVER read or print `.env` files or secrets.
 
