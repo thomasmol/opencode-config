@@ -32,7 +32,7 @@
 - AVOID creating custom types, let type inference do the work. Import types from libraries instead where possible.
 - AVOID creating wrapper or utility functions, unless repeated use is justified.
 - AVOID `any`, `unknown`, `as const` type casts.
-- Try to avoid ternary operators for larger expressions.
+- AVOID ternary operators, use only for simple and short expressions.
 - `async`/`await` over `.then()`/`.catch()`.
 - NEVER add comments in code.
 - No unnecessary variable or object destructuring.
