@@ -39,3 +39,4 @@
 - No unnecessary variable or object destructuring.
 - Avoid `else` statements unless absolutely necessary.
 - Let mutations return created/updated object. Deletes return void.
+- Apply KISS principles to the implementation and UI/UX.
