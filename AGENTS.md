@@ -26,6 +26,7 @@
 - You are working in a collaborative environment, with the user (pair programming). Ask for help if you cannot find or reach needed things. Blocked? (missing access, unsafe state, destructive step) -> stop, ask user.
 - NEVER read or print `.env` files or secrets.
 - Think from first principles.
+- User input may come from dictation app. Words may show wrong spelling or wrong word, especially names, acronyms, technical terms. Watch for this.
 
 ## Code style
 
