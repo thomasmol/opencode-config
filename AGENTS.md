@@ -36,7 +36,7 @@
 - AVOID `any`, `unknown`, `as const` type casts.
 - AVOID ternary operators, use only for simple and short expressions.
 - `async`/`await` over `.then()`/`.catch()`.
-- NEVER add comments in code.
+- AVOID adding comments in code. Only add `TODO` or explaining why a particular approach was taken if user asks.
 - No unnecessary variable or object destructuring.
 - Avoid `else` statements unless absolutely necessary.
 - Let mutations return created/updated object. Deletes return void.
