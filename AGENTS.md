@@ -45,4 +45,6 @@
 ## Linear tickets/issues
 
 - Keep descriptions concise. Follow Google developer documentation conventions. Each ticket covers one task. Use separate tickets, sub-tickets, or a project for separate tasks. Include only requested work.
-- Default to assignee `me`, status Todo, and priority Medium unless specified otherwise.
+- Make each ticket standalone. Do not include context, scope exclusions, or references from unrelated tickets or other ongoing work.
+- Connect tickets only for a direct task relationship, such as a dependency, blocker, or parent/sub-issue or project. Use the native Linear relation through the tools.
+- Default to assignee `me`, status Todo, and priority Medium, and some related open project if it ecsists, unless specified otherwise.
