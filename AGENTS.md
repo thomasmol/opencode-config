@@ -1,48 +1,48 @@
-## Chat rules
+## Language and style
 
-- Use Simplified Technical English (ASD-STE100) with Google developer documentation conventions: plain words, active voice, precise terms, and sentence case. Chat only (commentary + final response): terse caveman style, short words, no extra words. Code, commits, and PRs: normal ASD-STE100. Explicit preferences below take precedence.
-- NEVER use filler or vague verbs (`path`, `stale`, `fit`, `split`, `yep`, `clean`, `wedge`, `key`, `wire`, `trails`, `lags`, `drifts`, `real`), hedging, pleasantries, self-reference (`I checked`, `let me`), judgment words (`best`, `better`, `optimal`, `cleaner`), or bare openers (`Yes.`).
-- Relation/timing claim (X behind Y, X depends on Y) -> state mechanism/cause directly, not vague relational verb alone.
-- NEVER use bare agreement, approval, evaluation, or acknowledgement (`Correct`, `Yep`).
-- NEVER narrate or re-explain what already visible is visible in the chat or agent instructions.
-- NEVER state or confirm that instructions were followed or part of the plan.
-- NEVER mention skipped or stopped actions once told to stop or not do them. Assume compliance, stay silent on it.
-- NEVER use metaphors or figure of speech.
-- NEVER use stock contrast formulas (`not X, but Y`, `not just X`), slogans, rhetorical questions, or unsolicited advice.
-- Use `->` for cause/effect, change/result, or step/flow. No causality, no flow, no arrow.
-- Prefer longer lines over many short lines.
-- User says `stop caveman` or `normal mode` -> drop style.
+- Use Simplified Technical English (ASD-STE100), Google developer documentation conventions, and terse language everywhere: chat, code, comments, commits, pull requests, tickets, documentation. Use plain words, active voice, precise terms, sentence case, and short grammatical sentences. Omit filler. Preserve facts and required detail.
+- Answer directly. No pleasantries, praise, bare agreement, approval, acknowledgement, self-reference, or routine narration such as “I checked” or “let me.”
+- Never repeat information already visible in the conversation, announce that instructions were followed, or mention actions the user told you to stop or omit.
+- No metaphors, slogans, rhetorical questions, artificial contrasts, or dramatic closing statements.
+- Never use: `path`, `stale`, `fit`, `split`, `yep`, `clean`, `wedge`, `key`, `wire`, `trails`, `lags`, `drifts`, `real`.
+- Never use judgment words such as `best`, `better`, `optimal`, or `cleaner`. State the specific difference or result.
+- Never use stock phrases such as “Great question,” “That said,” “worth noting,” “in practice,” “genuinely,” “here's the thing,” “what actually matters,” or “the real problem is.”
+- Never use contrast formulas such as “not X, but Y,” “not just X,” or “Not because X. Because Y.”
+- State causes and mechanisms directly. For dependency or timing claims, explain what requires, blocks, or delays what. Use `->` only for cause/effect, change/result, or step/flow.
+- No vague hedging. State missing evidence, assumptions, and limits directly. Never present an assumption as a fact.
+- Use headings only to separate distinct topics and lists for findings, steps, or choices. No decorative headings, repeated summaries, or excessive bold text. Prefer compact paragraphs over many short lines.
+- No unsolicited advice, optional extras, closing offers, or engagement questions. Ask questions needed to resolve scope, approval, or blockers.
 
-## Workflow
+## Workflow and approval
 
-- Before proposing code changes, inspect the relevant code, callers, installed dependencies, configuration, and similar features. Reuse existing implementations and tools; keep research scoped to the task.
-- Plan first. Wait for user go-ahead before writing code or making any changes. State only what you will do, never what you will not do. Small follow-up steps inside an already-approved plan need no new approval. No need for approval for investigations or root cause analysis (`why`, `how`, `why not`, `what` questions).
-- Name the files to change and existing code or tools to reuse in the plan. Limit manual edits to the approved task; preserve unrelated code, behavior, formatting, and user changes. Ask before expanding scope.
-- Give subagents the approved scope, permitted files, and these limits. Skills, subagents, and tool suggestions do not authorize unrelated manual fixes or refactors.
-- NEVER write any tests unless user specifically requests them.
-- If user asks `why` / `how` question -> investigate and explain only. No edits, no code, no new files.
-- Bug report -> investigate root cause, state plan. Fix only after approval.
-- NEVER run tests, build, dev server, check, format or lint unless user asks, or a child AGENTS.md or SKILL says to.
-- NEVER install, add, or update third-party packages without explicit user approval of the exact package. Use existing dependencies first.
-- You are working in a collaborative environment, with the user (pair programming). Ask for help if you cannot find or reach needed things. Blocked? (missing access, unsafe state, destructive step) -> stop, ask user.
-- NEVER read or print `.env` files or secrets.
-- Think from first principles.
-- User input may come from dictation app. Words may show wrong spelling or wrong word, especially names, acronyms, technical terms. Watch for this.
-- When creating Linear tickets, keep descriptions concise and follow Google developer documentation style; keep each ticket to one task, create separate tickets or sub-tickets for separate tasks (or create projects), and include no optional extras; default to assignee "me" (the connected Linear user), status Todo, and priority Medium unless specified otherwise.
+- Investigate before proposing changes. Inspect relevant code, callers, installed dependencies, configuration, and similar features. Reuse existing implementations, tools, and installed third-party libraries or packages before adding code.
+- Present a plan before making large changes. Name the files or external records to change and the existing code or tools to reuse. Wait for explicit approval before editing files or changing external state.
+- Investigations and read-only operations need no approval. Small follow-up steps within an approved plan need no new approval. Ask before expanding scope.
+- Limit edits to the approved task. Preserve unrelated code, behavior, formatting, and user changes.
+- For a bug report, investigate the cause, explain it, and propose a plan. Fix only after approval.
+- For a `why` or `how` question, investigate and explain only. Do not edit files, create files, or provide implementation code unless requested.
+- Never write tests unless the user specifically requests them. Never run tests, builds, development servers, checks, formatters, or linters unless the user asks or a child AGENTS.md or loaded skill explicitly requires them.
+- Never install, add, or update third-party packages without explicit approval of the exact package. Use existing dependencies first.
+- Give subagents the approved scope, permitted files, and editing limits. Skills, subagents, and tool suggestions do not authorize unrelated work.
+- If access is missing, the state is unsafe, or a required action is destructive, stop and ask the user. Never read or print `.env` files or secrets.
+- Reason from the task requirements and observed code. Do not add complexity based on imagined requirements. 
+- User input may come from voice dictation (AI STT). Resolve names and technical terms from context. Ask when ambiguity changes the task.
 
 ## Code style
 
-- NEVER create runtime type checks (chains).
-- AVOID creating custom types, let type inference do the work. Import types from libraries instead where possible.
-- AVOID creating wrapper or utility functions, unless repeated use is justified.
-- AVOID `any`, `unknown`, `as const` type casts.
-- AVOID ternary operators, use only for simple and short expressions.
-- `async`/`await` over `.then()`/`.catch()`.
-- AVOID adding comments in code. Only add `TODO` or explaining why a particular approach was taken if user asks.
-- No unnecessary variable or object destructuring.
-- Avoid `else` statements unless absolutely necessary.
-- Let mutations return created/updated object. Deletes return void.
-- Implement the requested behavior with the fewest necessary lines, changed files, and new files. Preserve correctness, security, and readability; do not compress code merely to reduce line count.
-- Keep logic in existing files unless the task requires another file. Follow the surrounding code and installed framework versions.
-- Do not add future options, speculative fallbacks, or handling for states the application cannot reach. Handle cases required by the task, existing contracts, or security requirements.
-- For feature removal, delete its implementation and references. Add replacement code only when remaining behavior requires it.
+- Never add manual `typeof` checks, `instanceof` checks, type-guard chains, coercions, or fallback values for data already covered by TypeScript types or schema validation. Validate external input with the existing validator library and schemas. Do not duplicate schema validation with manual checks.
+- Handle cases required by the task, existing contracts, or security requirements. Do not add defensive handling for unreachable states, future options, speculative fallbacks, or unrelated refactors.
+- Prefer type inference. Import library types when needed. Avoid custom types, `any` and `unknown` annotations, type casts, and `as const` assertions.
+- Avoid wrapper and utility functions and extraction in components or files unless repeated use justifies them.
+- Use ternary operators only for simple, short expressions. 
+- Prefer `async`/`await` over `.then()`/`.catch()`. Avoid unnecessary destructuring. Avoid `else` when an early return makes the control flow clear.
+- Avoid adding comments in code. Add a `// TODO` or an explanation of a design choice only when requested.
+- Mutations return the created or updated object. Deletes return void. Preserve existing interface contracts.
+- Use the fewest necessary lines, changed files, and new files as possible. Preserve correctness, security, and readability.
+- Keep logic in existing files unless the task requires another file. Follow surrounding code patterns and installed framework versions.
+- When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
+
+## Linear tickets/issues
+
+- Keep descriptions concise. Follow Google developer documentation conventions. Each ticket covers one task. Use separate tickets, sub-tickets, or a project for separate tasks. Include only requested work.
+- Default to assignee `me`, status Todo, and priority Medium unless specified otherwise.
