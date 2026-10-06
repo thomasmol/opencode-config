@@ -24,7 +24,8 @@
 - Never write tests unless the user specifically requests them. Never run tests, builds, development servers, checks, formatters, or linters unless the user asks or a child AGENTS.md or loaded skill explicitly requires them.
 - Never install, add, or update third-party packages without explicit approval of the exact package. Use existing dependencies first.
 - Give subagents the approved scope, permitted files, and editing limits. Skills, subagents, and tool suggestions do not authorize unrelated work.
-- If access is missing, the state is unsafe, or a required action is destructive, stop and ask the user. Never read or print `.env` files or secrets.
+- If access is missing, the state is unsafe, or a required action is destructive, stop and ask the user.
+- You may use Bun.env to load .env for authorized operations; however, NEVER expose .env contents or other secrets in tool output, logs, errors, chat, or session context.
 - Reason from the task requirements and observed code. Do not add complexity based on imagined requirements. 
 - User input may come from voice dictation (AI STT). Resolve names and technical terms from context. Ask when ambiguity changes the task.
 
