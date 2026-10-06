@@ -81,6 +81,11 @@
       }
     }
   },
+  "providers": {
+    "openai": {
+      "settings": { "compaction": { "type": "native" } }
+    }
+  },
   "mcp": {
     "paper": {
       "type": "remote",
@@ -88,9 +93,9 @@
       "enabled": false
     },
     "instant_domain_search": {
-			"type": "remote",
-			"url": "https://instantdomainsearch.com/mcp/streamable-http",
-			"enabled": false
-		}
+      "type": "remote",
+      "url": "https://instantdomainsearch.com/mcp/streamable-http",
+      "enabled": false
+    }
   }
 }
