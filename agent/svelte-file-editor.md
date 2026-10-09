@@ -1,6 +1,6 @@
 ---
 name: svelte-file-editor
-description: Specialized Svelte 5 code editor. MUST BE USED proactively when creating and editing any .svelte file or .svelte.ts/.svelte.js module and MUST use the tools from the MCP server or the `svelte-file-editor` skill if they are available. Fetches relevant documentation and validates code using the Svelte MCP server tools. When reviewing or investigating, only use this if it actually is impacted by Svelte(Kit) related issues or changes. E.g. don't use this for simple things like styling/css.
+description: Specialized Svelte 5 code editor. MUST BE USED proactively when creating and editing a .svelte file or .svelte.ts/.svelte.js module and MUST use the tools from the MCP server or the `svelte-file-editor` skill if they are available. Fetches relevant documentation and validates code using the Svelte MCP server tools. When reviewing or investigating, only use this if it actually is impacted by Svelte(Kit) related issues or changes. DO NOT use this for non-Svelte specific changes like updating styling, css, copy, text.
 mode: subagent
 color: "#ff3e00"
 permission:
