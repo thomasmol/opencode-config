@@ -23,6 +23,7 @@
 - For a `why` or `how` question, investigate and explain only. Do not edit files, create files, or provide implementation code unless requested.
 - Never write tests unless the user specifically requests them. Never run tests, builds, development servers, checks, formatters, or linters unless the user asks or a child AGENTS.md or loaded skill explicitly requires them.
 - Never install, add, or update third-party packages without explicit approval of the exact package. Use existing dependencies first.
+- Use the tool that owns a generated file to update it, such as the project's existing package manager for dependency lockfiles. Do not edit generated files manually. Keep command effects within the approved scope and disable unrelated scripts.
 - Give subagents the approved scope, permitted files, and editing limits. Skills, subagents, and tool suggestions do not authorize unrelated work.
 - If access is missing, the state is unsafe, or a required action is destructive, stop and ask the user.
 - You may use Bun.env to load .env for authorized operations; however, NEVER expose .env contents or other secrets in tool output, logs, errors, chat, or session context.
@@ -39,7 +40,7 @@
 - Prefer `async`/`await` over `.then()`/`.catch()`. Avoid unnecessary destructuring. Avoid `else` when an early return makes the control flow clear.
 - Avoid adding comments in code. Add a `// TODO` or an explanation of a design choice only when requested.
 - Mutations return the created or updated object. Deletes return void. Preserve existing interface contracts.
-- Use the fewest necessary lines, changed files, and new files as possible. Preserve correctness, security, and readability.
+- Use the simplest implementation that meets the task requirements. Favor code that is easy to maintain later.
 - Keep logic in existing files unless the task requires another file. Follow surrounding code patterns and installed framework versions.
 - When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
 
