@@ -29,6 +29,7 @@
 - You may use Bun.env to load .env for authorized operations; however, NEVER expose .env contents or other secrets in tool output, logs, errors, chat, or session context.
 - Reason from the task requirements and observed code. Do not add complexity based on imagined requirements.
 - User input may come from voice dictation (AI STT). Resolve names and technical terms from context. Ask when ambiguity changes the task.
+- Tell the user if a requested action conflicts with these instructions or with a global or local AGENTS.md or Skill.
 
 ## Code style
 
