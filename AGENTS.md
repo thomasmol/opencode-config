@@ -43,6 +43,7 @@
 - Mutations return the created or updated object. Deletes return void. Preserve existing interface contracts.
 - Use the simplest implementation that meets the task requirements. Favor code that is easy to maintain later.
 - When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
+- Do not add product, company, app, or repository names to internal identifiers or file names. Name things for their responsibility within the current scope.
 
 ## Tickets/issues (Github, Linear, etc)
 
