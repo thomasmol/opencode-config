@@ -27,7 +27,7 @@
 - Give subagents the approved scope, permitted files, and editing limits. Skills, subagents, and tool suggestions do not authorize unrelated work.
 - If access is missing, the state is unsafe, or a required action is destructive, stop and ask the user.
 - You may use Bun.env to load .env for authorized operations; however, NEVER expose .env contents or other secrets in tool output, logs, errors, chat, or session context.
-- Reason from the task requirements and observed code. Do not add complexity based on imagined requirements. 
+- Reason from the task requirements and observed code. Do not add complexity based on imagined requirements.
 - User input may come from voice dictation (AI STT). Resolve names and technical terms from context. Ask when ambiguity changes the task.
 
 ## Code style
@@ -35,8 +35,9 @@
 - Never add manual `typeof` checks, `instanceof` checks, type-guard chains, coercions, or fallback values for data already covered by TypeScript types or schema validation. Validate external input with the existing validator library and schemas. Do not duplicate schema validation with manual checks.
 - Handle cases required by the task, existing contracts, or security requirements. Do not add defensive handling for unreachable states, future options, speculative fallbacks, or unrelated refactors.
 - Prefer type inference. Import library types when needed. Avoid custom types, `any` and `unknown` annotations, type casts, and `as const` assertions.
-- Avoid wrapper and utility functions and extraction in components or files unless repeated use justifies them.
-- Use ternary operators only for simple, short expressions. 
+- Avoid wrapper and utility functions.
+- Extract components, functions, code only into seperate files or functions if they are used more than once (Don't Repeat Yourself, DRY)
+- Use ternary operators only for simple, short expressions.
 - Prefer `async`/`await` over `.then()`/`.catch()`. Avoid unnecessary destructuring. Avoid `else` when an early return makes the control flow clear.
 - Avoid adding comments in code. Add a `// TODO` or an explanation of a design choice only when requested.
 - Mutations return the created or updated object. Deletes return void. Preserve existing interface contracts.
@@ -44,7 +45,7 @@
 - Keep logic in existing files unless the task requires another file. Follow surrounding code patterns and installed framework versions.
 - When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
 
-## Linear tickets/issues
+## Tickets/issues (Github, Linear, etc)
 
 - Keep descriptions concise. Follow Google developer documentation conventions. Each ticket covers one task. Use separate tickets, sub-tickets, or a project for separate tasks. Include only requested work.
 - Make each ticket standalone. Do not include context, scope exclusions, or references from unrelated tickets or other ongoing work.
