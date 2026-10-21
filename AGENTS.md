@@ -33,16 +33,15 @@
 ## Code style
 
 - Never add manual `typeof` checks, `instanceof` checks, type-guard chains, coercions, or fallback values for data already covered by TypeScript types or schema validation. Validate external input with the existing validator library and schemas. Do not duplicate schema validation with manual checks.
+- Always follow the surrounding code’s organization, responsibility boundaries, and abstraction level. Prefer direct, readable code. Apply DRY without adding unnecessary indirection.
 - Handle cases required by the task, existing contracts, or security requirements. Do not add defensive handling for unreachable states, future options, speculative fallbacks, or unrelated refactors.
 - Prefer type inference. Import library types when needed. Avoid custom types, `any` and `unknown` annotations, type casts, and `as const` assertions.
 - Avoid wrapper and utility functions.
-- Extract components, functions, code only into seperate files or functions if they are used more than once (Don't Repeat Yourself, DRY)
 - Use ternary operators only for simple, short expressions.
 - Prefer `async`/`await` over `.then()`/`.catch()`. Avoid unnecessary destructuring. Avoid `else` when an early return makes the control flow clear.
 - Avoid adding comments in code. Add a `// TODO` or an explanation of a design choice only when requested.
 - Mutations return the created or updated object. Deletes return void. Preserve existing interface contracts.
 - Use the simplest implementation that meets the task requirements. Favor code that is easy to maintain later.
-- Keep logic in existing files unless the task requires another file. Follow surrounding code patterns and installed framework versions.
 - When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
 
 ## Tickets/issues (Github, Linear, etc)
