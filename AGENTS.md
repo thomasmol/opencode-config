@@ -45,6 +45,7 @@
 - Use the simplest implementation that meets the task requirements. Favor code that is easy to maintain later.
 - When removing a feature, remove its implementation and references. Add replacement code only when remaining behavior requires it.
 - Do not add product, company, app, or repository names to internal identifiers or file names. Name things for their responsibility within the current scope.
+- UI/UX: Cut taglines, helper text and secondary labels. If a screen needs them to make sense, fix the layout.
 
 ## Tickets/issues (Github, Linear, etc)
 
