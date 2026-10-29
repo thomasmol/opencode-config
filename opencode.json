@@ -3,7 +3,7 @@
   "autoupdate": true,
   "username": "thomasmol",
   "autoshare": false,
-  "plugin": ["@sveltejs/opencode"],
+  "plugin": ["@sveltejs/opencode", "opencode-github-panel"],
   "permission": {
     "*": "allow",
     "bash": {
@@ -94,7 +94,7 @@
     },
     "instant_domain_search": {
       "type": "remote",
-      "url": "https://instantdomainsearch.com/mcp/streamable-http",
+      "url": "https://mcp.instantdomainsearch.com/mcp",
       "enabled": false
     }
   }
